@@ -1,0 +1,21 @@
+[flake8]
+ignore = W292
+exclude =
+    *migrations*,
+    # python related
+    *.pyc,
+    .git,
+    __pycache__,
+    venv/
+
+output-file = output.txt
+tee = True
+max-line-length=120
+max-doc-length=200
+; 为代码块设置允许的最大McCabe复杂度值
+max-complexity=12
+show_source = True
+statistics = True
+count = True
+; format=pylint
+format = %(path)s::%(row)d,%(col)d::%(code)s::%(text)s shadowtest
